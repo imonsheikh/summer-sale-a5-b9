@@ -13,6 +13,7 @@
 
 // practice 
 let titleCount = 1;
+let totalPrice = 0
 
 const cards = document.querySelectorAll('.card')
 // console.log(cards);
@@ -27,12 +28,12 @@ for(let index = 0; index < cards.length; index++){
     const title = card.querySelector('h3').innerText
     // console.log(title);
     // console.log(title.innerText);
-    const price = card.querySelector('span').innerHTML
-    // console.log(price);
+    const price = parseFloat(card.querySelector('span').innerHTML.split(" ")[1])
+    console.log(price);
     // console.log(price.innerText);
     
     const titleContainer = document.getElementById('title-container')
-    console.log(titleContainer);
+    console.log(titleContainer) ;
     
     const p = document.createElement('p')
     p.innerText = titleCount + ". " + title
@@ -40,6 +41,13 @@ for(let index = 0; index < cards.length; index++){
     titleContainer.appendChild(p)
     console.log(titleContainer);
     titleCount++
+
+
+    //calculate price
+    totalPrice += price
+    console.log(totalPrice);
+    document.getElementById('totalPrice').innerText = totalPrice.toFixed(2)
+    
     
   })
   
