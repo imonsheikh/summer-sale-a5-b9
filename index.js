@@ -12,6 +12,8 @@
 
 
 // practice 
+let titleCount = 1;
+
 const cards = document.querySelectorAll('.card')
 // console.log(cards);
 
@@ -33,10 +35,11 @@ for(let index = 0; index < cards.length; index++){
     console.log(titleContainer);
     
     const p = document.createElement('p')
-    p.innerText = title
+    p.innerText = titleCount + ". " + title
 
     titleContainer.appendChild(p)
     console.log(titleContainer);
+    titleCount++
     
   })
   
