@@ -18,6 +18,8 @@ const cards = document.querySelectorAll(".card");
 // console.log(cards);
 
 for (let index = 0; index < cards.length; index++) {
+
+  //Card button 1
   const card = cards[index];
   // console.log(card);
   card.addEventListener("click", function () {
@@ -50,6 +52,8 @@ for (let index = 0; index < cards.length; index++) {
   });
 }
 
+
+//Apply button 3
 const btn = document.getElementById("apply-btn");
 btn.addEventListener("click", function () {
   //get the value from input
@@ -85,3 +89,11 @@ btn.addEventListener("click", function () {
      document.getElementById("input-field").value = "";
   }
 });
+
+
+
+//Make Purchase btn 
+const makePurchaseElement = document.getElementById('make-purchase')
+makePurchaseElement.addEventListener('click', function(){
+   document.getElementById('my_modal_5').showModal()
+})
